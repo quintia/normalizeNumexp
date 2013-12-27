@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import jp.ac.tohoku.ecei.cl.numexp.*;
 
 public class TestNormalizeNumexp {
     static {

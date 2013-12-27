@@ -4,7 +4,7 @@
 #1. create _wrap.cxx and wrapper source files by swig.
 [ -d src ] || mkdir src
 [ -d classes ] || mkdir classes
-swig -c++ -java -I../../src/  -o normalize_numexp_wrap.cxx -outdir src ../normalize_numexp.i
+swig -c++ -java -I../../src/  -o normalize_numexp_wrap.cxx -package jp.ac.tohoku.ecei.cl.numexp  -outdir src ../normalize_numexp.i
 
 #2. compile _wrap.cxx (JNI header files are necessary.)
 gcc -O2 -fPIC -c normalize_numexp_wrap.cxx -I../../src/ -I/usr/lib/jvm/java-7-oracle/include -I/usr/lib/jvm/java-7-oracle/include/linux
