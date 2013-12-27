@@ -9,16 +9,12 @@ public class TestNormalizeNumexp {
         NormalizeNumexp n = new NormalizeNumexp("ja");
         StringVector result = new StringVector(0);
         
-        Scanner stdin = new Scanner(System.in);
-        while (stdin.hasNext()) {
-            String text = stdin.next();
-            n.normalize(text, result);
+        String text = "魔女狩りは15世紀〜18世紀にかけてみられ、全ヨーロッパで4万人が処刑された";
+        n.normalize(text, result);
 
-            System.out.println("text:" + text);
-            for (long i = 0, size = result.size(); i < size; i++) {
-                System.out.println(result.get((int)i));
-            }
-            System.out.println();
+        System.out.println("text:" + text);
+        for (long i = 0, size = result.size(); i < size; i++) {
+            System.out.println(result.get((int)i));
         }
     }
 }
